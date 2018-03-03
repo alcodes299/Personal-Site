@@ -13,26 +13,68 @@
  *= require_tree .
  *= require_self
  */
-#theOne{
-  text-align:   center;
+ body{
+   background: #121E19;
+ }
+ .myName{
+   color: white;
+   background: violet;
+ }
+.main{
+  text-align: center;
+  padding-left: 12px;
 }
-.oneTwo{
+.title{
+  color: white;
+  padding-top: 130px;
+  font-family: "Palatino"
+}
+#oneThird{
   float: left;
-  color: white;
-   width: 45%;
-   height: 100%;
-   background: blue;
-   margin: 10px;
-   text-align: center;
-}
-.twoOne{
-  color: white;
-  float: right;
-  width: 45%;
-  height: 100%;
+  width: 700px;
   background: red;
-  margin: 10px;
+  height: 85%;
+  border: 3px solid black;
+  background-image: url("webdesign.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.long{
-  height: 200px;
+#twoThird{
+  float: left;
+  width: 700px;
+  background: yellow;
+  height: 85%;
+  border: 3px solid black;
+  background-image: url("some_code.jpg");
+  background-position: center;
+}
+#threeThird{
+  float: left;
+  background: #121E19;
+  width: 700px;
+  height: 85%;
+  border: 3px solid black;
+  background-image: url("muizey.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#four{
+  float: left;
+  background: green;
+  width: 700px;
+  height: 85%;
+  border: 3px solid black;
+  background-image: url("setup-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bottom-tab{
+  color: white;
+  height: 5%;
+  background: black;
+  width: 4000px;
 }

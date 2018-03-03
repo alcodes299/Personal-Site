@@ -13,4 +13,4 @@
 //= require rails-ujs
 //= require_tree .
 
-console.log('work')
+console.log('java-live')
