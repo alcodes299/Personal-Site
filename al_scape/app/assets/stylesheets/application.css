@@ -20,6 +20,11 @@
    color: white;
    background: violet;
  }
+ .linkStyle{
+   background: blue;
+   opacity: 0.4;
+ }
+ 
 .main{
   text-align: center;
   padding-left: 12px;
