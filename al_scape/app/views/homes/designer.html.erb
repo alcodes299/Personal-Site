@@ -1,1 +1,96 @@
 <h1>webdesign</h1>
+<div id="time">
+  <script type="text/javascript">
+    var time = document.getElementById("time")
+    console.log(time)
+    function clock() {
+      var today = new Date()
+      var h = today.getHours()
+      var m = today.getMinutes()
+      var s = today.getSeconds()
+      m = checkZeros(m)
+      s = checkZeros(s)
+      time.innerHTML = h+':'+m+':'+s
+    }
+    function checkZeros(i) {
+      if (i < 10) {i ="0" + i}
+      return i
+    }
+    setInterval(clock,1000)
+
+  </script>
+
+</div>
+<style>
+  #container{
+    width: 200px;
+    height: 25px;
+    background: green;
+    position: relative;
+  }
+  #small-box{
+    width: 25px;
+    height: 25px;
+    background: red;
+    position: absolute;
+
+  }
+</style>
+<div id="container">
+  <div id="small-box">
+
+  </div>
+</div>
+<script>
+  var smallBox = document.getElementById("small-box")
+  var t = setInterval(move, 100)
+  var pos = 0
+  function move(){
+    if(pos>175){
+      clearInterval(t)
+    } else{
+      pos += 4
+      smallBox.style.left = pos+'px'
+    }
+
+  }
+  smallBox.addEventListener("click", back)
+  function back(){
+    function add(){
+      if(pos<0){
+        clearInterval(y)
+      } else {
+        pos-=4
+        smallBox.style.left = pos+'px'
+      }
+    }
+    var y = setInterval(add,100)
+  }
+
+</script>
+<style>
+  #space{
+    background: black;
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+  }
+</style>
+<div id="space">
+  <div id="big-world">
+
+  </div>
+</div>
+<div id="map" style="width:50%;height:400px;"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(42.33, -71.0), zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT98CrGi1WQiYyJQClA_NhI3OSy8tSFsw&callback=myMap"></script>
